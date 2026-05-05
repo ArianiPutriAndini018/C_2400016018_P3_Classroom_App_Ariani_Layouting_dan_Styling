@@ -7,23 +7,23 @@ Aplikasi ini juga memiliki fitur filter untuk menampilkan semua kelas, kelas teo
 
 # 2. Fitur Aplikasi
 Aplikasi ini memiliki beberapa fitur utama, yaitu:
-1. Menampilkan daftar jadwal kelas.
-2. Menampilkan kelas teori dan praktikum.
-3. Filter jadwal berdasarkan kategori Semua, Teori, dan Praktikum.
-4. Header interaktif menggunakan SliverAppBar.
-5. Efek parallax pada header.
-6. Tampilan card modern menggunakan gradient.
-7. Tampilan responsif menggunakan Row, Column, Expanded, Spacer, dan Wrap.
-8. Informasi setiap kelas ditampilkan dengan icon, judul, dan deskripsi.
-9. Data jadwal ditampilkan secara dinamis menggunakan SliverChildBuilderDelegate.
-10. Struktur kode dibuat modular agar mudah dibaca dan dikembangkan.
+    1. Menampilkan daftar jadwal kelas.
+    2. Menampilkan kelas teori dan praktikum.
+    3. Filter jadwal berdasarkan kategori Semua, Teori, dan Praktikum.
+    4. Header interaktif menggunakan SliverAppBar.
+    5. Efek parallax pada header.
+    6. Tampilan card modern menggunakan gradient.
+    7. Tampilan responsif menggunakan Row, Column, Expanded, Spacer, dan Wrap.
+    8. Informasi setiap kelas ditampilkan dengan icon, judul, dan deskripsi.
+    9. Data jadwal ditampilkan secara dinamis menggunakan SliverChildBuilderDelegate.
+    10. Struktur kode dibuat modular agar mudah dibaca dan dikembangkan.
 
 
 # 3. Teknologi yang Digunakan
 Aplikasi ini dibuat menggunakan:
-1. Flutter
-2. Dart
-3. Material Design 3
+    1. Flutter
+    2. Dart
+    3. Material Design 3
 Flutter digunakan untuk membangun tampilan aplikasi mobile. Dart digunakan sebagai bahasa pemrograman utama. Material Design 3 digunakan melalui konfigurasi ThemeData dengan useMaterial3 bernilai true.
 
 
@@ -60,9 +60,8 @@ lib/
 
 
 # 6. Penjelasan File main.dart
-File main.dart merupakan titik awal aplikasi Flutter.
-Pada file ini terdapat kode:
-
+- File main.dart merupakan titik awal aplikasi Flutter.
+- Pada file ini terdapat kode:
 void main() {
   runApp(const MyClassroomApp());
 }
