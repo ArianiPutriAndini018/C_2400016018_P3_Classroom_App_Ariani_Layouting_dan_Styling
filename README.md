@@ -1,11 +1,11 @@
 ```text
-# 1. Classroom App Flutter
+1. Classroom App Flutter
 Classroom App Flutter adalah aplikasi mobile berbasis Flutter yang digunakan untuk menampilkan daftar jadwal kelas teori dan praktikum dalam satu halaman. Aplikasi ini dibuat dengan tampilan modern, rapi, responsif, dan mudah digunakan.
 Aplikasi menampilkan data jadwal dalam bentuk card/list yang dapat discroll. Setiap jadwal memiliki informasi lengkap seperti nama mata kuliah, jenis kelas, kelas, hari, jam, ruangan, dosen atau asisten, icon, dan warna tampilan yang berbeda.
 Aplikasi ini juga memiliki fitur filter untuk menampilkan semua kelas, kelas teori, atau kelas praktikum.
 
 
-# 2. Fitur Aplikasi
+2. Fitur Aplikasi
 Aplikasi ini memiliki beberapa fitur utama, yaitu:
     1. Menampilkan daftar jadwal kelas.
     2. Menampilkan kelas teori dan praktikum.
@@ -19,7 +19,7 @@ Aplikasi ini memiliki beberapa fitur utama, yaitu:
     10. Struktur kode dibuat modular agar mudah dibaca dan dikembangkan.
 
 
-# 3. Teknologi yang Digunakan
+3. Teknologi yang Digunakan
 Aplikasi ini dibuat menggunakan:
     1. Flutter
     2. Dart
@@ -27,7 +27,7 @@ Aplikasi ini dibuat menggunakan:
 Flutter digunakan untuk membangun tampilan aplikasi mobile. Dart digunakan sebagai bahasa pemrograman utama. Material Design 3 digunakan melalui konfigurasi ThemeData dengan useMaterial3 bernilai true.
 
 
-# 4. Struktur Project
+4. Struktur Project
 lib/
 |
 ├── constants/
@@ -52,24 +52,23 @@ lib/
 └── main.dart
 
 
-# 5. Penjelasan Alur Aplikasi
+5. Penjelasan Alur Aplikasi
 - Aplikasi dimulai dari file main.dart. Pada file ini terdapat fungsi main() yang menjalankan aplikasi menggunakan runApp().
 - Widget utama yang dijalankan adalah MyClassroomApp. Widget ini berada di file app.dart dan berfungsi sebagai konfigurasi awal aplikasi.
 - Di dalam MyClassroomApp terdapat MaterialApp yang mengatur judul aplikasi, tema warna, background, Material Design 3, dan halaman pertama yang ditampilkan.
 - Halaman utama aplikasi adalah ClassSchedulePage. Halaman ini menampilkan header, filter, judul section, dan daftar jadwal kelas.
 
 
-# 6. Penjelasan File main.dart
+6. Penjelasan File main.dart
 - File main.dart merupakan titik awal aplikasi Flutter.
 - Pada file ini terdapat kode:
 void main() {
   runApp(const MyClassroomApp());
 }
-
 Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runApp() digunakan untuk menjalankan widget utama aplikasi, yaitu MyClassroomApp.
 
 
-# 7. Penjelasan File app.dart
+7. Penjelasan File app.dart
 - File app.dart berisi class MyClassroomApp yang merupakan StatelessWidget.
 - Di dalam class ini terdapat MaterialApp yang mengatur konfigurasi utama aplikasi, seperti:
     1. title untuk nama aplikasi.
@@ -82,7 +81,7 @@ Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runAp
 - Halaman utama yang digunakan adalah ClassSchedulePage.
 
 
-# 8. Penjelasan File app_colors.dart
+8. Penjelasan File app_colors.dart
 - File app_colors.dart berfungsi untuk menyimpan warna-warna utama yang digunakan dalam aplikasi.
 - Warna yang didefinisikan antara lain:
     1. background untuk warna latar aplikasi.
@@ -94,7 +93,7 @@ Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runAp
 - Penggunaan file constants seperti ini membuat warna aplikasi lebih terpusat, sehingga jika ingin mengganti warna cukup dilakukan dari satu file.
 
 
-# 9. Penjelasan Model ClassSchedule
+9. Penjelasan Model ClassSchedule
 - Model ClassSchedule digunakan sebagai struktur data untuk menyimpan informasi jadwal kelas.
 - Setiap data jadwal memiliki beberapa atribut:
     1. title untuk nama mata kuliah.
@@ -109,7 +108,7 @@ Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runAp
 - Model ini membuat data jadwal lebih rapi karena setiap item memiliki struktur yang sama.
 
 
-# 10. Penjelasan Data Jadwal
+10. Penjelasan Data Jadwal
 - Data jadwal disimpan dalam bentuk const List<ClassSchedule> bernama classSchedules.
 - Setiap item di dalam list adalah object ClassSchedule. Data yang disimpan mencakup jadwal teori dan praktikum.
 - Contoh data yang ditampilkan dalam aplikasi antara lain:
@@ -123,7 +122,7 @@ Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runAp
 - Data praktikum juga ditampilkan dengan ruangan laboratorium dan pengajar berupa Asisten Praktikum.
 
 
-# 11. Penjelasan Halaman ClassSchedulePage
+11. Penjelasan Halaman ClassSchedulePage
 - ClassSchedulePage adalah halaman utama aplikasi. Halaman ini menggunakan StatefulWidget karena memiliki data yang dapat berubah, yaitu filter yang dipilih pengguna.
 - Variabel selectedFilter digunakan untuk menyimpan filter aktif. Nilai awalnya adalah Semua.
 - Daftar filter yang tersedia adalah:
@@ -135,7 +134,7 @@ Fungsi main() akan dipanggil pertama kali saat aplikasi dijalankan. Fungsi runAp
 - Method _changeFilter() menggunakan setState() untuk mengubah filter aktif dan memperbarui tampilan.
 
 
-# 12. Implementasi CustomScrollView dan Sliver
+12. Implementasi CustomScrollView dan Sliver
 Halaman utama menggunakan CustomScrollView sebagai layout scroll utama.
 Di dalam CustomScrollView terdapat beberapa sliver:
   1. SliverAppBar untuk header.
@@ -145,7 +144,7 @@ Di dalam CustomScrollView terdapat beberapa sliver:
 Penggunaan SliverList membuat aplikasi lebih efisien karena item list dibuat berdasarkan kebutuhan menggunakan builder.
 
 
-# 13. Penjelasan SliverAppBar
+13. Penjelasan SliverAppBar
 SliverAppBar digunakan sebagai header aplikasi yang dapat merespons scroll.
 Properti yang digunakan antara lain:
   1. pinned: true, agar header tetap terlihat saat discroll.
@@ -159,7 +158,7 @@ Properti yang digunakan antara lain:
 Header dibuat lebih menarik dengan gradient, icon kalender, dekorasi lingkaran, dan perubahan tampilan dari header besar ke header compact.
 
 
-# 14. Penjelasan ScheduleParallaxHeader
+14. Penjelasan ScheduleParallaxHeader
 - ScheduleParallaxHeader adalah widget untuk membuat header interaktif dengan efek parallax.
 - Widget ini menggunakan LayoutBuilder untuk mengetahui tinggi header saat berubah ketika halaman discroll.
 - Nilai progress dihitung berdasarkan perubahan tinggi header. Nilai ini digunakan untuk mengatur:
@@ -170,7 +169,7 @@ Header dibuat lebih menarik dengan gradient, icon kalender, dekorasi lingkaran, 
 - Saat header masih terbuka, aplikasi menampilkan header besar yang berisi sapaan, judul, deskripsi, dan icon. Saat halaman discroll, header berubah menjadi tampilan compact yang berisi judul dan jumlah kelas.
 
 
-# 15. Penjelasan FilterSection
+15. Penjelasan FilterSection
 - FilterSection adalah widget untuk menampilkan tombol filter kategori kelas.
 - Widget ini menerima tiga parameter:
     1. filters, yaitu daftar filter.
@@ -181,14 +180,14 @@ Header dibuat lebih menarik dengan gradient, icon kalender, dekorasi lingkaran, 
 - Tombol filter aktif memiliki warna berbeda, border, dan shadow. Tombol yang tidak aktif menggunakan warna putih dan teks abu-abu.
 
 
-# 16. Penjelasan SectionTitle
+16. Penjelasan SectionTitle
 - SectionTitle adalah widget untuk menampilkan judul daftar kelas dan jumlah kelas yang sedang tampil.
 - Widget ini menggunakan Row untuk menyusun teks Daftar Kelas di sisi kiri dan badge jumlah kelas di sisi kanan.
 - Spacer digunakan di antara teks dan badge agar keduanya terdorong ke sisi yang berbeda.
 - Badge jumlah kelas dibuat menggunakan Container dengan padding, background warna biru transparan, dan border radius agar tampil seperti label kecil.
 
 
-# 17. Penjelasan ClassScheduleCard
+17. Penjelasan ClassScheduleCard
 - ClassScheduleCard adalah widget utama untuk menampilkan satu data jadwal kelas.
 - Widget ini menerima object ClassSchedule melalui parameter schedule.
 - Card menampilkan informasi:
@@ -203,14 +202,14 @@ Header dibuat lebih menarik dengan gradient, icon kalender, dekorasi lingkaran, 
 - Bagian dalam card menggunakan ClipRRect agar sudut card tetap melengkung sesuai border radius. Background card menggunakan LinearGradient berdasarkan warna yang ada pada data schedule.
 
 
-# 18. Penjelasan roomText
+18. Penjelasan roomText
 - Di dalam ClassScheduleCard terdapat getter roomText.
 - Getter ini digunakan untuk mengatur format teks ruangan.
 - Jika ruangan mengandung kata lab, maka teks ruangan ditampilkan langsung. Contohnya Lab PSI atau Lab SBTI.
 - Jika ruangan bukan laboratorium, maka teks akan ditambahkan kata Ruang di depannya. Contohnya 4.1.5.63 menjadi Ruang 4.1.5.63.
 
 
-# 19. Penjelasan Dekorasi Card
+19. Penjelasan Dekorasi Card
 - Card memiliki beberapa dekorasi visual menggunakan Stack dan Positioned.
 - Dekorasi yang digunakan antara lain:
     1. Lingkaran transparan di beberapa posisi.
@@ -220,13 +219,13 @@ Header dibuat lebih menarik dengan gradient, icon kalender, dekorasi lingkaran, 
 - Dekorasi ini membuat card terlihat lebih modern dan tidak monoton.
 
 
-# 20. Penjelasan _ClassIcon
+20. Penjelasan _ClassIcon
 _ClassIcon digunakan untuk menampilkan icon mata kuliah di sisi kiri card.
 Widget ini menggunakan Container dengan ukuran 58x58, background putih transparan, border, border radius, dan icon.
 Icon yang ditampilkan berasal dari data schedule.icon.
 
 
-# 21. Penjelasan _ClassInfo
+21. Penjelasan _ClassInfo
 _ClassInfo digunakan untuk menampilkan detail informasi kelas.
 Widget ini menggunakan Column agar informasi tersusun secara vertikal.
 Informasi yang ditampilkan terdiri dari:
@@ -240,19 +239,19 @@ Bagian jenis kelas dan nama kelas menggunakan Wrap agar tetap rapi ketika ruang 
 Judul mata kuliah dibatasi dengan maxLines 2 dan overflow ellipsis agar teks panjang tidak merusak layout.
 
 
-# 22. Penjelasan _TypeBadge
+22. Penjelasan _TypeBadge
 _TypeBadge digunakan untuk menampilkan jenis kelas, yaitu Teori atau Praktikum.
 Badge dibuat dengan Container yang memiliki padding, warna putih transparan, border, dan border radius. Teks dibuat bold agar mudah dibaca.
 
 
-# 23. Penjelasan _InfoLine
+23. Penjelasan _InfoLine
 _InfoLine digunakan untuk menampilkan baris informasi kecil pada card.
 - Setiap baris terdiri dari icon dan text. Widget ini menggunakan Row agar icon dan teks sejajar secara horizontal.
 - Expanded digunakan pada bagian text agar teks dapat menyesuaikan ruang yang tersedia. Jika teks terlalu panjang, maka akan dipotong menggunakan overflow ellipsis.
 _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 
 
-# 24. Penggunaan Row
+24. Penggunaan Row
 - Row digunakan untuk menyusun widget secara horizontal.
 - Dalam aplikasi ini, Row digunakan pada beberapa bagian:
     1. Menyusun tombol filter.
@@ -263,7 +262,7 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 - Penggunaan Row membuat elemen-elemen yang seharusnya sejajar ke samping dapat ditampilkan dengan rapi.
 
 
-# 25. Penggunaan Column
+25. Penggunaan Column
 - Column digunakan untuk menyusun widget secara vertikal.
 - Dalam aplikasi ini, Column digunakan untuk:
     1. Menyusun filter, section title, dan jarak pada halaman utama.
@@ -273,7 +272,7 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 -Column membuat informasi yang berurutan dapat ditampilkan dari atas ke bawah dengan struktur yang jelas.
 
 
-# 26. Penggunaan Expanded
+26. Penggunaan Expanded
 - Expanded digunakan agar widget dapat mengisi ruang kosong yang tersedia.
 - Dalam aplikasi ini, Expanded digunakan untuk:
     1. Membuat tombol filter memiliki lebar seimbang.
@@ -283,23 +282,23 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 - Expanded sangat penting untuk membuat layout tetap responsif.
 
 
-# 27. Penggunaan Spacer
+27. Penggunaan Spacer
 - Spacer digunakan untuk memberi jarak fleksibel antar widget.
 - Dalam aplikasi ini, Spacer digunakan pada SectionTitle untuk memisahkan teks Daftar Kelas dan badge jumlah kelas. Dengan Spacer, badge akan terdorong ke sisi kanan secara otomatis.
 
 
-# 28. Penggunaan Wrap
+28. Penggunaan Wrap
 - Wrap digunakan pada bagian informasi jenis kelas dan nama kelas.
 - Wrap dipilih karena lebih fleksibel dibanding Row ketika ukuran layar sempit. Jika ruang horizontal tidak cukup, elemen dapat turun ke baris berikutnya tanpa merusak tampilan.
 
 
-# 29. Penggunaan Padding dan Margin
+29. Penggunaan Padding dan Margin
 - Padding digunakan untuk memberi jarak di dalam widget. Contohnya padding pada card, filter, header, dan badge.
 - Margin digunakan untuk memberi jarak di luar widget. Contohnya margin bawah pada setiap card agar card tidak saling menempel.
 - Penggunaan padding dan margin membuat tampilan lebih lega dan mudah dibaca.
 
 
-# 30. Penggunaan Border Radius
+30. Penggunaan Border Radius
 - Border radius digunakan untuk membuat sudut widget menjadi melengkung.
 - Border radius diterapkan pada:
   1. Header bagian bawah.
@@ -311,7 +310,7 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 - Sudut melengkung membuat tampilan aplikasi terlihat lebih modern.
 
 
-# 31. Penggunaan Gradient
+31. Penggunaan Gradient
 - Gradient digunakan untuk membuat perpaduan warna pada background.
 - Gradient diterapkan pada:
     1. Header aplikasi.
@@ -319,27 +318,27 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 - Setiap card memiliki warna gradient yang berbeda berdasarkan data schedule.colors. Hal ini membuat setiap mata kuliah memiliki tampilan visual yang unik.
 
 
-# 32. Penggunaan Shadow
+32. Penggunaan Shadow
 - Shadow digunakan untuk memberikan efek bayangan pada card dan tombol filter aktif.
 - Pada card, shadow menggunakan warna utama dari gradient agar bayangan terlihat menyatu dengan desain card.
 - Pada tombol filter, shadow hanya muncul ketika filter sedang aktif. Hal ini membantu pengguna mengetahui filter mana yang sedang dipilih.
 
 
-# 33. Implementasi List
+33. Implementasi List
 - Aplikasi menggunakan SliverList untuk menampilkan daftar jadwal kelas.
 - SliverList menggunakan SliverChildBuilderDelegate. Dengan builder ini, setiap item jadwal dibuat berdasarkan index dari data schedules.
 - Jumlah item yang ditampilkan ditentukan oleh childCount: schedules.length.
 - Ini membuat list lebih efisien karena widget dibuat sesuai kebutuhan saat ditampilkan pada layar.
 
 
-# 34. Implementasi Filter Data
+34. Implementasi Filter Data
 - Filter data dilakukan pada getter filteredSchedules.
 - Jika selectedFilter bernilai Semua, maka seluruh data classSchedules dikembalikan.
 - Jika selectedFilter bernilai Teori atau Praktikum, maka data difilter menggunakan where() berdasarkan schedule.type.
 - Setelah filter dipilih, setState() akan memperbarui selectedFilter dan tampilan aplikasi akan dirender ulang.
 
 
-# 35. Responsivitas Tampilan
+35. Responsivitas Tampilan
 - Aplikasi dibuat responsif dengan beberapa pendekatan:
     1. Expanded digunakan agar elemen menyesuaikan ruang layar.
     2. Wrap digunakan agar badge tetap rapi pada layar kecil.
@@ -349,7 +348,7 @@ _InfoLine digunakan untuk informasi jadwal, lokasi, dan pengajar.
 - Dengan ini, tampilan aplikasi tidak mudah rusak ketika teks panjang atau ukuran layar berubah.
 
 
-# 36. Hasil Aplikasi
+36. Hasil Aplikasi
 - Aplikasi berhasil menampilkan daftar jadwal kelas dalam bentuk list/card yang rapi dan modern.
 - Setiap item jadwal memiliki icon, judul mata kuliah, jenis kelas, deskripsi jadwal, ruangan, dan pengajar.
 - Filter kategori dapat digunakan untuk menampilkan semua jadwal, hanya teori, atau hanya praktikum.
